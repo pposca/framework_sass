@@ -1,4 +1,7 @@
 /* Grid extra */
+@use 'sass:math';
+@use '../base/variables' as vars;
+
 $row-spacing: (
   0: 0px,
   1: 8px,
@@ -14,5 +17,17 @@ $row-spacing: (
 
   .gy-#{$key} {
     --gutter-y: #{$value};
+  }
+}
+
+// Ejercicio: tamaños de columnas responsive
+@each $breakpoint, $min-width in vars.$breakpoints {
+  @media (min-width >= $min-width) {
+    @for $i from 1 through vars.$grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        width: math.div(100%, vars.$grid-columns) * $i;
+        padding-inline: calc(var(--gutter-x)/2);
+      }
+    }
   }
 }
