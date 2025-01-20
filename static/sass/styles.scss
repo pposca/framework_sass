@@ -4,3 +4,13 @@
 @use 'base/typography';
 @use 'base/colors';
 @use 'layout/containers';
+@use 'layout/grid';
+
+.debug-border {
+  margin-block: 10px;
+
+  .item {
+    outline: 1px solid;
+    background-color: wheat;
+  }
+}
