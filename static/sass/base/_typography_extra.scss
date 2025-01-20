@@ -1,0 +1,18 @@
+/* Tipografía extra */
+@use 'sass:list';
+@use 'variables' as vars;
+
+
+$font-sizes: 0.875rem, 1rem, 1.25rem,
+  1.5rem, 2rem;
+
+@each $breakpoint, $size in vars.$breakpoints {
+
+  @each $size in $font-sizes {
+    $index: list.index($font-sizes, $size);
+
+    .fs-#{$breakpoint}-#{$index} {
+      font-size: $size;
+    }
+  }
+}
