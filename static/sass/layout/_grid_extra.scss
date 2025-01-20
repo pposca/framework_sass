@@ -31,3 +31,18 @@ $row-spacing: (
     }
   }
 }
+
+// Ejercicio: tamaños de gutter responsive
+@each $breakpoint, $min-width in vars.$breakpoints {
+  @media (min-width: $min-width) {
+    @each $key, $value in $row-spacing {
+      .gx-#{$breakpoint}-#{$key} {
+        --gutter-x: #{$value};
+      }
+
+      .gy-#{$breakpoint}-#{$key} {
+        --gutter-y: #{$value};
+      }
+    }
+  }
+}
