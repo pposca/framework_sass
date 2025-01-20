@@ -368,6 +368,47 @@ li {
   padding-inline: calc(var(--gutter-x) / 2);
 }
 
+/* Grid extra */
+.gx-0 {
+  --gutter-x: 0px;
+}
+
+.gy-0 {
+  --gutter-y: 0px;
+}
+
+.gx-1 {
+  --gutter-x: 8px;
+}
+
+.gy-1 {
+  --gutter-y: 8px;
+}
+
+.gx-2 {
+  --gutter-x: 16px;
+}
+
+.gy-2 {
+  --gutter-y: 16px;
+}
+
+.gx-3 {
+  --gutter-x: 24px;
+}
+
+.gy-3 {
+  --gutter-y: 24px;
+}
+
+.gx-4 {
+  --gutter-x: 32px;
+}
+
+.gy-4 {
+  --gutter-y: 32px;
+}
+
 .debug-border {
   margin-block: 10px;
 }
